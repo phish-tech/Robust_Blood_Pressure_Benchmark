@@ -76,16 +76,7 @@ cd Robust-Blood_Pressure-Benchmark
 ## 📚 引用 (Citation)
 
 如果您在研究中使用了此数据筛选协议或我们策划的数据集，请引用我们即将发表的 EMBC 2026 论文（预印本）：
-
-```bibtex
-@inproceedings{tianlab2026robustbp,
-  title={Robust-BP-Bench: A Stratified Sampling Protocol for Continuous Blood Pressure Estimation},
-  author={Your Name and Xiaorong Ding and Min He and Xi Tian},
-  booktitle={48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC)},
-  year={2026},
-  organization={IEEE}
-}
-```
+（等待ARXIV审核中，即将上线）
 
 
 ---
