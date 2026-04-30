@@ -56,7 +56,13 @@ The complete, 1GB curated "Golden Subset" derived from the actual MIMIC-II datab
 ## 📊 Dataset Demographics
 Our protocol guarantees a balanced distribution, which is crucial for training unbiased regression models.
 
-(Generate this plot locally by running the demographic section in our scripts).
+### Overall Dataset Distribution
+<img width="2000" height="615" alt="image" src="https://github.com/user-attachments/assets/49eca6e4-651d-4a46-8817-81798c7be748" />
+
+### Selected Sample Dataset Distribution
+
+<img width="2611" height="1064" alt="demo_demographics" src="https://github.com/user-attachments/assets/ae6e108d-2124-4b16-9d9f-439f174032de" />
+
 
 ## 📚 Citation
 If you use this data selection protocol or the curated dataset in your research, please cite our upcoming EMBC 2026 paper:
