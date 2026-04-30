@@ -68,3 +68,41 @@ Our protocol guarantees a balanced distribution, which is crucial for training u
 If you use this data selection protocol or the curated dataset in your research, please cite our upcoming EMBC 2026 paper:
 
 Code snippet
+
+
+---
+
+## 🔬 Research Based on This Dataset: Accepted by EMBC 2026
+
+The open-sourced `Robust-BP-Bench` dataset in this repository was curated specifically to support our group's latest breakthrough in continuous non-invasive blood pressure (cNIBP) estimation. This work has been officially accepted by **IEEE EMBC 2026**.
+
+> 📄 **Paper Title:** *From Elastic to Viscoelastic: An EEMD-Corrected PTT Model for Precise Blood Pressure Tracking*
+
+### 💡 Why Do Traditional PTT Models Fail?
+Existing Pulse Transit Time (PTT) models are widely based on the Moens-Korteweg equation, which fundamentally assumes human blood vessels are "purely elastic" rigid tubes. However, real biological tissues exhibit **Viscoelasticity**. During severe blood pressure fluctuations, this viscoelasticity introduces a significant "Hysteresis" effect between PTT and actual BP, causing the accuracy of traditional models to drop precipitously.
+
+### 🚀 Our Approach (The Secret Sauce)
+We propose a novel EEMD-corrected PTT physical hybrid model, achieving a paradigm shift from "purely elastic" to "viscoelastic":
+
+1. **Intersecting Tangent Method for Foot Localization:** Abandoning highly unstable peak detection, we utilize 10x Makima high-fidelity interpolation and the maximum rising slope tangent to provide a stable benchmark for PTT calculation that strictly aligns with hemodynamic definitions.
+2. **Viscoelastic Compensation via EEMD:** Utilizing Ensemble Empirical Mode Decomposition (EEMD), we "dismantle" the PPG signal and extract the differential energy of high-frequency modes as the "viscoelastic compensation feature." This perfectly quantifies the signal's kinematic intensity, drastically offsetting motion artifacts and hysteresis errors.
+
+<div align="center">
+  <img width="1175" height="847" alt="Methodology" src="https://github.com/user-attachments/assets/21b2eef9-6601-438a-911b-d91ae0709aa5" />
+</div>
+
+### 🏆 Experimental Performance
+Tested on the extreme clinical dataset open-sourced in this repository (which includes 23.4% hypertensive samples), our algorithm demonstrated excellent performance:
+
+<div align="center">
+  <img width="1480" height="1125" alt="Results" src="https://github.com/user-attachments/assets/7be5a667-f898-42cc-a32e-f8ea1608fb8f" />
+</div>
+
+* **Robust Beat-to-Beat Tracking:** Whether the blood pressure is experiencing severe fluctuations, sharp ascents, or downward trends, the EEMD-corrected model closely tracks the true arterial blood pressure (Ground Truth).
+
+<br>
+
+🔔 **Full Core Code Teaser:** The algorithmic framework, including EEMD signal decomposition and tangent foot localization, will be open-sourced in this repository upon the official publication of the paper.  
+**[⭐ Star this repository]** to get notified of updates instantly!
+
+🌐 For more information about the EMBC 2026 conference, please visit: [EMBC Official Website](https://embc.embs.org/)
