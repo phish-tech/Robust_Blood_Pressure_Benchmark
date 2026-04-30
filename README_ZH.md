@@ -57,20 +57,25 @@ cd Robust-Blood_Pressure-Benchmark
 
 ## 📊 数据集分布 (Demographics)
 
-我们的协议保证了极其均衡的数据分布，这对于训练无偏回归模型至关重要。
+我们的协议保证了均衡的数据分布，这对于训练无偏回归模型至关重要。
 
+### 全部数据集分布展示
+
+<img width="2000" height="615" alt="image" src="https://github.com/user-attachments/assets/662cfb7a-eda2-41f4-9050-70f5f1cb3bc0" />
+
+
+### 部分数据集分布展示
 <div align="center">
   <img src="demo_demographics.png" width="90%" alt="Dataset Demographics">
   <p><i>图 1: 精选子集的人口统计学分布，展示了完美均衡的 SBP 类别以及广泛的心率覆盖范围。</i></p>
 </div>
 
-*(通过运行我们脚本中的 demographic 部分，您可以在本地一键生成此分布图)。*
 
 ---
 
 ## 📚 引用 (Citation)
 
-如果您在研究中使用了此数据筛选协议或我们策划的数据集，请引用我们即将发表的 EMBC 2026 论文：
+如果您在研究中使用了此数据筛选协议或我们策划的数据集，请引用我们即将发表的 EMBC 2026 论文（预印本）：
 
 ```bibtex
 @inproceedings{tianlab2026robustbp,
@@ -81,3 +86,36 @@ cd Robust-Blood_Pressure-Benchmark
   organization={IEEE}
 }
 ```
+
+
+---
+
+## 🔬 基于此项数据的研究：EMBC 2026 录用成果
+
+本项目开源的 `Robust-BP-Bench` 数据集，正是为了支撑我们课题组在连续无创血压领域的最新突破。该成果已被 **IEEE EMBC 2026** 正式录用。
+
+> 📄 **论文题目:** *From Elastic to Viscoelastic: An EEMD-Corrected PTT Model for Precise Blood Pressure Tracking*
+
+### 💡 为什么传统 PTT 模型会失效？
+现有的脉搏波传导时间 (PTT) 模型普遍基于 Moens-Korteweg 方程，它们假设完全基于人体血管是“纯弹性”的刚性管道。然而，真实的生物组织具有**粘弹性 (Viscoelasticity)**。在血压剧烈波动时，这种粘弹性会导致 PTT 与实际血压之间产生严重的“迟滞 (Hysteresis)”效应，从而导致传统模型的精度断崖式下跌。
+
+### 🚀 我们的破局之道 (The Secret Sauce)
+我们提出了一种全新的 EEMD 修正 PTT 物理混合模型，完成了从“纯弹性”到“粘弹性”的范式跃迁：
+
+1. **切线相交法波足定位 (Intersecting Tangent Method):** 摒弃了极不稳定的极值点检测，利用 10 倍 Makima 高保真插值与最大上升斜率切线，为 PTT 计算提供了符合严谨血流动力学定义的稳定基准。
+2. **EEMD 粘弹性补偿 (Viscoelastic Compensation):** 利用集合经验模态分解 (EEMD)，我们将 PPG 信号“拆解”，提取出高频模态的微分能量作为“粘弹性补偿特征”，完美量化了信号的动力学强度，大幅抵消了运动伪影与迟滞误差。
+
+   <img width="1175" height="847" alt="image" src="https://github.com/user-attachments/assets/21b2eef9-6601-438a-911b-d91ae0709aa5" />
+
+### 🏆 实验表现
+在基于本仓库开源的包含 23.4% 高血压样本的极端临床数据集上，我们的算法展现出了优秀的表现：
+
+<img width="1480" height="1125" alt="image" src="https://github.com/user-attachments/assets/7be5a667-f898-42cc-a32e-f8ea1608fb8f" />
+
+* **极强的 Beat-to-Beat 追踪:** 无论血压是处于剧烈波动、急剧上升还是下降趋势，EEMD 修正模型都能紧紧贴合动脉真实血压 (Ground Truth)。
+
+
+🔔 **完整核心代码预告:** 包含 EEMD 信号拆解与切线波足定位的算法框架，将在论文正式见刊后于本项目中开源。
+**[⭐ Star 本仓库]** 以获取第一时间的更新通知！
+
+🌐 了解更多关于 EMBC 2026 会议的信息，请访问：[EMBC Official Website](https://embc.embs.org/)
