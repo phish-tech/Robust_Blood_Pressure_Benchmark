@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h1>🫀 Robust-BP-Bench</h1>
+  <h1>🫀 Robust-Blood_Pressure-Benchmark</h1>
   <p><b>专为连续血压估计打造的：高度精选、类均衡且包含高波动数据的 MIMIC-II 子集</b></p>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19912053.svg)](https://doi.org/10.5281/zenodo.19912053)
