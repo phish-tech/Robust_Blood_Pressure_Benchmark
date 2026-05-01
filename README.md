@@ -67,7 +67,7 @@ Our protocol guarantees a balanced distribution, which is crucial for training u
 ## 📚 Citation
 If you use this data selection protocol or the curated dataset in your research, please cite our upcoming EMBC 2026 paper:
 
-Code snippet
+[From Elastic to Viscoelastic: An EEMD-Enhanced Pulse Transit Time Model for Robust Blood Pressure Estimation](https://arxiv.org/abs/2604.27500)
 
 
 ---
