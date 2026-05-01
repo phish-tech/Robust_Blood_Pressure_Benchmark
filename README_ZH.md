@@ -76,7 +76,10 @@ cd Robust-Blood_Pressure-Benchmark
 ## 📚 引用 (Citation)
 
 如果您在研究中使用了此数据筛选协议或我们策划的数据集，请引用我们即将发表的 EMBC 2026 论文（预印本）：
-（等待ARXIV审核中，即将上线）
+
+**From Elastic to Viscoelastic: An EEMD-Enhanced Pulse Transit Time Model for Robust Blood Pressure Estimation
+
+https://arxiv.org/abs/2604.27500**
 
 
 ---
